@@ -158,6 +158,7 @@ class PlayState extends MusicBeatState
 	public var dialogue:Array<String> = ['dad:blah blah blah', 'bf:coolswag'];
 
 	var halloweenBG:FlxSprite;
+	var halloweenBGSTAR:FlxSprite;
 	var isHalloween:Bool = false;
 
 	var phillyCityLights:FlxTypedGroup<FlxSprite>;
@@ -364,6 +365,21 @@ class PlayState extends MusicBeatState
 				halloweenBG.antialiasing = true;
 				add(halloweenBG);
 
+				isHalloween = true;
+			}
+		  case 'star': 
+			{
+				curStage = 'star';
+				halloweenLevel = true;
+
+				var hallowTexSTAR = Paths.getSparrowAtlas('halloween_bg-STAR','southstar');
+				halloweenBGSTAR = new FlxSprite(-200, -100);
+				halloweenBGSTAR.frames = hallowTexSTAR;
+				halloweenBGSTAR.animation.addByPrefix('idle', 'halloweem bg0');
+				halloweenBGSTAR.animation.addByPrefix('lightning', 'halloweem bg lightning strike', 24, false);
+				halloweenBGSTAR.animation.play('idle');
+				halloweenBGSTAR.antialiasing = true;
+				add(halloweenBGSTAR);
 				isHalloween = true;
 			}
 			case 'philly': 
