@@ -1,5 +1,6 @@
 stage
 halloween
+star
 philly
 limo
 mall
