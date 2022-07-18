@@ -1,7 +1,9 @@
 bf
+bf-star
 dad
 gf
 spooky
+spooky-star
 pico
 mom
 mom-car
